@@ -9,15 +9,14 @@
 | category_id         | integer  | null: false  |
 | situation_id        | integer  | null: false  |
 | delivery_charge_id  | integer  | null: false  |
-| prefectures_id      | integer  | null: false  |
+| prefecture_id       | integer  | null: false  |
 | delivery_date_id    | integer  | null: false  |
 | price               | integer  | null: false  |
 
 ### Association
 
 - belongs_to :user
-- has_one :order
-- has_one :purchases
+- has_one :purchase
 
 
 ## usersテーブル
@@ -37,7 +36,6 @@
 ### Association
 
 - has_many :items
-- has_many :orders
 - has_many :purchases
 
 
@@ -46,18 +44,16 @@
 | Column            | Type        | Options                         |
 |-------------------|-------------|---------------------------------|
 | post_number       | string      | null: false                     |
-| prefectures_id    | integer     | null: false                     |
+| prefecture_id     | integer     | null: false                     |
 | city              | string      | null: false                     |
 | address           | string      | null: false                     |
 | building_name     | string      |                                 |
 | telephone_number  | string      | null: false                     |
-| purchases_id      | references  | null: false, foreign_key: true  |
+| purchase_id       | references  | null: false, foreign_key: true  |
 
 
 ### Association
 
-- belongs_to :item
-- belongs_to :user
 - belongs_to :purchase
 
 
@@ -66,7 +62,7 @@
 | Column    | Type        | Options                         |
 |-----------|-------------|---------------------------------|
 | user_id   | references  | null: false, foreign_key: true  |
-| items_id  | references  | null: false, foreign_key: true  |
+| item_id   | references  | null: false, foreign_key: true  |
 
 ### Association
 
