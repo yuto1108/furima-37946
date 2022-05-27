@@ -2,16 +2,17 @@
 
 ## itemsテーブル
 
-| Column              | Type     | Options      |
-|---------------------|----------|--------------|
-| name                | string   | null: false  |
-| content             | text     | null: false  |
-| category_id         | integer  | null: false  |
-| situation_id        | integer  | null: false  |
-| delivery_charge_id  | integer  | null: false  |
-| prefecture_id       | integer  | null: false  |
-| delivery_date_id    | integer  | null: false  |
-| price               | integer  | null: false  |
+| Column              | Type        | Options                         |
+|---------------------|-------------|---------------------------------|
+| name                | string      | null: false                     |
+| content             | text        | null: false                     |
+| category_id         | integer     | null: false                     |
+| situation_id        | integer     | null: false                     |
+| delivery_charge_id  | integer     | null: false                     |
+| prefecture_id       | integer     | null: false                     |
+| delivery_date_id    | integer     | null: false                     |
+| price               | integer     | null: false                     |
+| user                | references  | null: false, foreign_key: true  |
 
 ### Association
 
@@ -21,16 +22,16 @@
 
 ## usersテーブル
 
-| Column              | Type     | Options                    |
-|---------------------|----------|----------------------------|
-| nickname            | string   | null: false                |
-| email               | string   | null: false,  unique: true |
-| encrypted_password  | string   | null: false                |
-| last_name           | string   | null: false                |
-| first_name          | string   | null: false                |
-| last_name_reading   | string   | null: false                |
-| first_name_reading  | string   | null: false                |
-| birthday            | date     | null: false                |
+| Column              | Type     | Options                     |
+|---------------------|----------|-----------------------------|
+| nickname            | string   | null: false                 |
+| email               | string   | null: false,  unique: true  |
+| encrypted_password  | string   | null: false                 |
+| last_name           | string   | null: false                 |
+| first_name          | string   | null: false                 |
+| last_name_reading   | string   | null: false                 |
+| first_name_reading  | string   | null: false                 |
+| birthday            | date     | null: false                 |
 
 
 ### Association
@@ -49,7 +50,7 @@
 | address           | string      | null: false                     |
 | building_name     | string      |                                 |
 | telephone_number  | string      | null: false                     |
-| purchase_id       | references  | null: false, foreign_key: true  |
+| purchase          | references  | null: false, foreign_key: true  |
 
 
 ### Association
@@ -59,10 +60,10 @@
 
 ## purchasesテーブル
 
-| Column    | Type        | Options                         |
-|-----------|-------------|---------------------------------|
-| user_id   | references  | null: false, foreign_key: true  |
-| item_id   | references  | null: false, foreign_key: true  |
+| Column | Type        | Options                         |
+|--------|-------------|---------------------------------|
+| users  | references  | null: false, foreign_key: true  |
+| items  | references  | null: false, foreign_key: true  |
 
 ### Association
 
