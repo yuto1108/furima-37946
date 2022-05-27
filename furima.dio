@@ -5,7 +5,7 @@
                 <mxCell id="0"/>
                 <mxCell id="1" parent="0"/>
                 <mxCell id="47" value="items" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;align=center;fontSize=14;" parent="1" vertex="1">
-                    <mxGeometry x="40" y="120" width="280" height="266" as="geometry">
+                    <mxGeometry x="40" y="120" width="280" height="296" as="geometry">
                         <mxRectangle x="460" y="24" width="50" height="26" as="alternateBounds"/>
                     </mxGeometry>
                 </mxCell>
@@ -32,6 +32,9 @@
                 </mxCell>
                 <mxCell id="120" value="price (integer型、 NOT NULL)" style="text;strokeColor=none;fillColor=none;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=12;" parent="47" vertex="1">
                     <mxGeometry y="236" width="280" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="135" value="user (references型、 NOT NULL、 外部キー)" style="text;strokeColor=none;fillColor=none;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=12;" vertex="1" parent="47">
+                    <mxGeometry y="266" width="280" height="30" as="geometry"/>
                 </mxCell>
                 <mxCell id="52" value="users" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;align=center;fontSize=14;" parent="1" vertex="1">
                     <mxGeometry x="560" y="120" width="260" height="266" as="geometry">

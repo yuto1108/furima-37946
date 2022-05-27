@@ -12,7 +12,7 @@
 | prefecture_id       | integer     | null: false                     |
 | delivery_date_id    | integer     | null: false                     |
 | price               | integer     | null: false                     |
-| user                | references  | null: false, foreign_key: true  |
+| users               | references  | null: false, foreign_key: true  |
 
 ### Association
 
@@ -42,15 +42,15 @@
 
 ## ordersテーブル
 
-| Column            | Type        | Options                         |
-|-------------------|-------------|---------------------------------|
-| post_number       | string      | null: false                     |
-| prefecture_id     | integer     | null: false                     |
-| city              | string      | null: false                     |
-| address           | string      | null: false                     |
-| building_name     | string      |                                 |
-| telephone_number  | string      | null: false                     |
-| purchase          | references  | null: false, foreign_key: true  |
+| Column             | Type        | Options                         |
+|--------------------|-------------|---------------------------------|
+| post_number        | string      | null: false                     |
+| prefecture_id      | integer     | null: false                     |
+| city               | string      | null: false                     |
+| address            | string      | null: false                     |
+| building_name      | string      |                                 |
+| telephone_number   | string      | null: false                     |
+| purchases          | references  | null: false, foreign_key: true  |
 
 
 ### Association
