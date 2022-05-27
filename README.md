@@ -12,7 +12,7 @@
 | prefecture_id       | integer     | null: false                     |
 | delivery_date_id    | integer     | null: false                     |
 | price               | integer     | null: false                     |
-| users               | references  | null: false, foreign_key: true  |
+| user                | references  | null: false, foreign_key: true  |
 
 ### Association
 
@@ -50,7 +50,7 @@
 | address            | string      | null: false                     |
 | building_name      | string      |                                 |
 | telephone_number   | string      | null: false                     |
-| purchases          | references  | null: false, foreign_key: true  |
+| purchase           | references  | null: false, foreign_key: true  |
 
 
 ### Association
@@ -62,8 +62,8 @@
 
 | Column | Type        | Options                         |
 |--------|-------------|---------------------------------|
-| users  | references  | null: false, foreign_key: true  |
-| items  | references  | null: false, foreign_key: true  |
+| user   | references  | null: false, foreign_key: true  |
+| item   | references  | null: false, foreign_key: true  |
 
 ### Association
 
