@@ -68,7 +68,7 @@ RSpec.describe User, type: :model do
         expect(another_user.errors.full_messages).to include("Email has already been taken")
       end
       
-      it "passwordに@がない" do
+      it "emailに@がない" do
         @user.email = "aaa111"
         @user.valid?
         expect(@user.errors.full_messages).to include("Email is invalid")
@@ -102,6 +102,13 @@ RSpec.describe User, type: :model do
       it "passwordが半角数字を含んでいない" do
         @user.password = "aaaaaa"
         @user.valid?
+        expect(@user.errors.full_messages).to include("Password is invalid. Include both letters and numbers")
+      end
+
+      it "passwordが全角を含んでいる" do
+        @user.password = "AAAAAAA"
+        @user.valid?
+        binding.pry
         expect(@user.errors.full_messages).to include("Password is invalid. Include both letters and numbers")
       end
 
