@@ -11,7 +11,7 @@ RSpec.describe Item, type: :model do
       end
     end
 
-    context "ユーザー登録ができないとき" do
+    context "商品出品登録ができないとき" do
       it "nameが空" do
         @item.name = ""
         @item.valid?
@@ -83,6 +83,13 @@ RSpec.describe Item, type: :model do
         @item.valid?
         expect(@item.errors.full_messages).to include("Price is out of setting range")
       end
+
+      it "ユーザーが紐付いていないと登録できない" do
+        @item.user = nil
+        @item.valid?
+        expect(@item.errors.full_messages).to include("User must exist")
+      end
+
     end
   end
 end
