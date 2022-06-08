@@ -37,11 +37,10 @@
 ### Association
 
 - has_many :items
-- has_many :purchases
+- has_many :purchases 
 
 
 ## ordersテーブル
-
 | Column             | Type        | Options                         |
 |--------------------|-------------|---------------------------------|
 | post_number        | string      | null: false                     |
