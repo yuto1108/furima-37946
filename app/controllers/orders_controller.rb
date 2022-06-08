@@ -11,10 +11,6 @@ class OrdersController < ApplicationController
     end
   end
 
-  def new
-    @purchase_order = PurchaseOrder.new
-  end
-
   def create
     @item = Item.find(params[:item_id])
     @purchase_order = PurchaseOrder.new(order_params)
